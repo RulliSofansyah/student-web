@@ -1,0 +1,20 @@
+<form action="#" th:action="@{/students}" th:object="${student}" method="POST">
+    <table>
+        <tr>
+            <td><label for="nim">NIM</label></td>
+            <td><input type="text" th:field="*{nim}" id="nim" placeholder="NIM"></td>
+        </tr>
+        <tr>
+            <td><label for="fullName">Full Name</label></td>
+            <td><input type="text" th:field="*{fullName}" id="fullName" placeholder="Full Name"></td>
+        </tr>
+        <tr>
+            <td><label for="address">Address</label></td>
+            <td><input type="text" th:field="*{address}" id="address" placeholder="Address"></td>
+        </tr>
+        <br />
+        <tr>
+            <td><input type="submit" value="addStudents"></td>
+        </tr>
+    </table>
+</form>

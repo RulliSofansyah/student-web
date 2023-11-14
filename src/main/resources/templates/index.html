@@ -1,0 +1,26 @@
+<div th:switch="${students}">
+    <div th:case="*">
+        <h2>Students Of Budi Luhur</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>NIM</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="students : ${student}">
+                    <td th:text="${student.nim}"></td>
+                    <td th:text="${student.fullName}"></td>
+                    <td th:text="${student.address}"></td>
+                    <td><a href="#">Edit</a></td>
+                    <td><a href="#">Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p><a href="/signup">Add a new student</a></p>
+</div>
